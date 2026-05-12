@@ -4,6 +4,12 @@
 
 Codex skills for research-oriented workflows.
 
+## Installation
+
+```bash
+npx skills add EricZhu-42/research-skills
+```
+
 ## Skills
 
 - `skills/worktree-swarm-plan`: helps discuss how to split a large research or engineering task into parallel workstreams, create or synchronize Git worktrees, and write per-worktree execution plans for independent Codex sessions.
@@ -14,9 +20,3 @@ Codex skills for research-oriented workflows.
 Use `worktree-swarm-plan` when a task can be explored in parallel across multiple Git worktrees.
 
 Use `audit-gated-goal` when the task is not a fixed checklist, such as research exploration, method refinement, benchmark discovery, or setting search. It is not intended for clear one-shot tasks like running one specified experiment, fixing one known bug, or generating one fixed file.
-
-## Installation
-
-```bash
-npx skills add EricZhu-42/research-skills
-```
