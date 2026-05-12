@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worktree Swarm Plan"
+  short_description: "Plan parallel research or engineering work across Git worktrees."
+  default_prompt: "Use worktree-swarm-plan to discuss a parallel worktree split, create synchronized Git worktrees, and write per-worktree plans."
