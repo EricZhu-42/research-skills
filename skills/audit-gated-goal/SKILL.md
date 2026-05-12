@@ -29,6 +29,8 @@ Keep the prompt concise:
 
 - Put task-specific experiment matrix, dataset choices, method details, and metrics in `WORKTREE_PLAN.md`.
 - Put execution principles, stop rules, audit cadence, and auditor prompt in `GOAL_PROMPT.md`.
+- `GOAL_PROMPT.md` must be directly copyable by the user into Goal Mode. Do not start it with a title or heading.
+- `GOAL_PROMPT.md` must be no more than 4000 characters. In normal cases, target 1000-2000 characters.
 
 This keeps the active goal context small while preserving detailed plans locally.
 
@@ -85,11 +87,9 @@ reports/<workstream>_external_audit.md
 
 ### 6. Write The Goal Prompt
 
-Recommended `GOAL_PROMPT.md` structure:
+Recommended `GOAL_PROMPT.md` structure. Do not include a leading title; start directly with the executable instruction. Keep the whole prompt under 4000 characters, and normally 1000-2000 characters:
 
 ```markdown
-# Goal Prompt For <Workstream>
-
 Execute `plans/WORKTREE_PLAN.md`. The plan defines the exploratory work; this file defines execution and stopping rules.
 
 ## Execution Principles
