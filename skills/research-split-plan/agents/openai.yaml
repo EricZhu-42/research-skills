@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Split Plan"
+  short_description: "Split broad work into parallel plans."
+  default_prompt: "Use $research-split-plan to split this research direction into independent workstreams and write execution plans."

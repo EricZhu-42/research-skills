@@ -1,6 +1,6 @@
 ---
 name: audit-gated-goal
-description: Create Goal Prompt files for exploratory improvement tasks where the user has a difficult, directional, or weakly quantified objective rather than a precise checklist. Use when Codex Goal Mode should keep improving a research direction, method, benchmark, setting, or open-ended engineering target for a time budget, and may stop early only after external Codex sub-agent audit confirms substantive progress. Do not use for clear one-shot tasks such as running a specified experiment, fixing a known bug, or producing a fixed artifact.
+description: Create Goal Prompt files for exploratory improvement tasks where the user has a difficult, directional, or weakly quantified objective rather than a precise checklist. Use when Codex Goal Mode should keep improving a research direction, method, benchmark, setting, or open-ended engineering target for a time budget, and may stop early only after external Codex sub-agent audit confirms substantive progress. Can be used standalone for an existing plan or chained after research-split-plan; do not use for clear one-shot tasks such as running a specified experiment, fixing a known bug, or producing a fixed artifact.
 ---
 
 # Audit-Gated Goal
@@ -120,4 +120,12 @@ Final answer must state stop reason, audit verdict, key changes, key metrics, cl
 
 Standalone use: create or update one `GOAL_PROMPT.md` for one exploratory direction.
 
-Chained use after `worktree-swarm-plan`: for every generated worktree, read its `WORKTREE_PLAN.md`, create a matching `GOAL_PROMPT.md`, and ensure the prompt refers to that worktree's artifacts and audit report path.
+Chained use after `research-split-plan`: for every generated workstream or worktree plan, read its `WORKTREE_PLAN.md`, create a matching `GOAL_PROMPT.md`, and ensure the prompt refers to that stream's artifacts and audit report path.
+
+Full workflow use:
+
+```text
+research-split-plan -> worktree-create -> audit-gated-goal
+```
+
+If worktrees already exist, skip `worktree-create`. If no written plan exists yet, use `research-split-plan` before this skill so the goal prompt can stay concise and refer to a stable plan file.

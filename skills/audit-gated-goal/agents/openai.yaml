@@ -1,4 +1,4 @@
 interface:
   display_name: "Audit-Gated Goal"
   short_description: "Guide exploratory Goal Mode work with external audit gates."
-  default_prompt: "Use audit-gated-goal to create a Goal Prompt for exploratory improvement: a directional objective, time budget, external Codex sub-agent audit, and strict PASS_STOP/FAIL_CONTINUE stop rules."
+  default_prompt: "Use $audit-gated-goal to create a Goal Prompt for exploratory improvement with a time budget, external audit, and strict PASS_STOP/FAIL_CONTINUE stop rules."

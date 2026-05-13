@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worktree Create"
+  short_description: "Create or reuse Git worktrees safely."
+  default_prompt: "Use $worktree-create to create a Git worktree from the current repository for manual follow-up work."
